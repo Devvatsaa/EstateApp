@@ -1,0 +1,15 @@
+modules = ["nodejs-20"]
+run = "nodemon app.js"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "nodemon app.js"]
+
+[[ports]]
+localPort = 8000
+
+[[ports]]
+localPort = 8800
+externalPort = 80
